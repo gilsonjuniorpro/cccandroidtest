@@ -25,7 +25,7 @@ class PersonRepository(context: Context) {
         return personDao.getAll()
     }
 
-    fun load(): List<Person> {
+    fun load(): Person {
         return personDao.get()
     }
 }

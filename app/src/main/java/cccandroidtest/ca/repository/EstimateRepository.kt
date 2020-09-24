@@ -25,7 +25,7 @@ class EstimateRepository(context: Context) {
         return estimateDao.getAll()
     }
 
-    fun load(): List<Estimate> {
+    fun load(): Estimate {
         return estimateDao.get()
     }
 }

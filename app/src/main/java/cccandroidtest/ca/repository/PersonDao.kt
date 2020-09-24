@@ -10,7 +10,7 @@ interface PersonDao {
     fun getAll(): Flow<List<Person>>
 
     @Query("SELECT * FROM person ORDER BY id DESC")
-    fun get(): List<Person>
+    fun get(): Person
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(person: Person)

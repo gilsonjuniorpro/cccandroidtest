@@ -13,8 +13,8 @@ class PersonViewModel(
     private val _person = MutableLiveData<Person>()
     val person: LiveData<Person> = _person
 
-    private val _list = MutableLiveData<List<Person>>()
-    val listPerson: LiveData<List<Person>> = _list
+    private val _list = MutableLiveData<Person>()
+    val listPerson: LiveData<Person> = _list
 
     val allPerson = repository.getAll().asLiveData()
 

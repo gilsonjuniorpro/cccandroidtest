@@ -10,7 +10,7 @@ interface EstimateDao {
     fun getAll(): Flow<List<Estimate>>
 
     @Query("SELECT * FROM estimate ORDER BY id DESC")
-    fun get(): List<Estimate>
+    fun get(): Estimate
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(estimate: Estimate)

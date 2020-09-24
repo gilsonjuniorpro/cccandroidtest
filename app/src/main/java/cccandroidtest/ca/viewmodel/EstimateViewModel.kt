@@ -13,8 +13,8 @@ class EstimateViewModel(
     private val _estimate = MutableLiveData<Estimate>()
     val estimate: LiveData<Estimate> = _estimate
 
-    private val _list = MutableLiveData<List<Estimate>>()
-    val listEstimate: LiveData<List<Estimate>> = _list
+    private val _list = MutableLiveData<Estimate>()
+    val listEstimate: LiveData<Estimate> = _list
 
     val allEstimate = repository.getAll().asLiveData()
 

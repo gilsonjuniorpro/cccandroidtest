@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivPicture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tvSchoolName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivPicture"
+            app:layout_constraintTop_toTopOf="@+id/ivPicture"
+            tools:text="Placebo Secundary School" />
+
+        <TextView
+            android:id="@+id/tvSchoolAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/colorSubtitle"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPicture"
+            app:layout_constraintEnd_toEndOf="@+id/tvSchoolName"
+            app:layout_constraintStart_toStartOf="@+id/tvSchoolName"
+            app:layout_constraintTop_toBottomOf="@+id/tvSchoolName"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="32 Commissioners Road East" />
+
+        <TextView
+            android:id="@+id/tvEstDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPicture"
+            tools:text="Est. Details" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEstDetails" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="205dp" />
+
+        <TextView
+            android:id="@+id/tvEstNumberLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Est. Number"
+            android:textColor="@color/colorSubtitle"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/tvReviewNumberLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Review Numer"
+            android:textColor="@color/colorSubtitle"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/tvEstNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvEstNumberLabel"
+            app:layout_constraintStart_toStartOf="@+id/tvEstNumberLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvEstNumberLabel"
+            tools:text="32" />
+
+        <TextView
+            android:id="@+id/tvReviewNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvReviewNumberLabel"
+            app:layout_constraintStart_toStartOf="@+id/tvReviewNumberLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvReviewNumberLabel"
+            tools:text="4" />
+
+
+        <TextView
+            android:id="@+id/tvCreatedLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Created"
+            android:textColor="@color/colorSubtitle"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvEstNumber" />
+
+        <TextView
+            android:id="@+id/tvRequesterLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Requester"
+            android:textColor="@color/colorSubtitle"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreated" />
+
+        <TextView
+            android:id="@+id/tvCreatedByLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Created By"
+            android:textColor="@color/colorSubtitle"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvReviewNumber" />
+
+        <TextView
+            android:id="@+id/tvContactLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Created By"
+            android:textColor="@color/colorSubtitle"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreatedBy" />
+
+        <TextView
+            android:id="@+id/tvCreated"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvCreatedLabel"
+            app:layout_constraintStart_toStartOf="@+id/tvCreatedLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreatedLabel"
+            tools:text="2020-08-22" />
+
+        <TextView
+            android:id="@+id/tvRequester"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvRequesterLabel"
+            app:layout_constraintStart_toStartOf="@+id/tvRequesterLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvRequesterLabel"
+            tools:text="Joseph Sham" />
+
+        <TextView
+            android:id="@+id/tvCreatedBy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvCreatedByLabel"
+            app:layout_constraintStart_toStartOf="@+id/tvCreatedByLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvCreatedByLabel"
+            tools:text="Joseph Sham" />
+
+        <TextView
+            android:id="@+id/tvContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvContactLabel"
+            app:layout_constraintStart_toStartOf="@+id/tvContactLabel"
+            app:layout_constraintTop_toBottomOf="@+id/tvContactLabel"
+            tools:text="Joseph Sham" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

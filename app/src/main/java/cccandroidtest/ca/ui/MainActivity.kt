@@ -1,7 +1,8 @@
-package cccandroidtest.ca
+package cccandroidtest.ca.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import cccandroidtest.ca.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
@@ -33,5 +34,33 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    implementation "androidx.room:room-runtime:2.2.5"
+    implementation "androidx.room:room-ktx:2.2.5"
+    kapt "androidx.room:room-compiler:2.2.5"
+
+    //enable coroutines
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
+
+    //viewmodel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    //allow coroutines inside viewmodel
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    //add livedata
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+
+    //make requests to network
+    implementation 'com.squareup.okhttp3:okhttp:4.3.1'
+
+    //map class from Json to objetcs
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'com.airbnb.android:lottie:3.4.2'
+
+    implementation 'com.github.Shashank02051997:FancyGifDialog-Android:1.2'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
 
 }

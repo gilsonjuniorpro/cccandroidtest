@@ -25,11 +25,7 @@ class EstimateRepository(context: Context) {
         return estimateDao.getAll()
     }
 
-    fun search(keyword: String?): List<Estimate> {
-        return if(keyword.isNullOrBlank()){
-            estimateDao.search()
-        }else{
-            estimateDao.search(keyword)
-        }
+    fun load(): List<Estimate> {
+        return estimateDao.get()
     }
 }

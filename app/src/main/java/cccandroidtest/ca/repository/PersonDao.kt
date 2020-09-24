@@ -9,12 +9,8 @@ interface PersonDao {
     @Query("SELECT * FROM person ORDER BY id DESC")
     fun getAll(): Flow<List<Person>>
 
-    @Query("SELECT * FROM person WHERE name LIKE '%' || :keyword || '%' " +
-            " ORDER BY id DESC")
-    fun search(keyword: String?): List<Person>
-
     @Query("SELECT * FROM person ORDER BY id DESC")
-    fun search(): List<Person>
+    fun get(): List<Person>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(person: Person)

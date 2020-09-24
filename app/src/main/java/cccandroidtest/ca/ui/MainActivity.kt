@@ -10,6 +10,8 @@ import cccandroidtest.ca.R
 import cccandroidtest.ca.databinding.ActivityMainBinding
 import cccandroidtest.ca.fragment.MainFragment
 import cccandroidtest.ca.model.Response
+import cccandroidtest.ca.repository.EstimateRepository
+import cccandroidtest.ca.repository.PersonRepository
 import cccandroidtest.ca.util.Constants
 import cccandroidtest.ca.util.NetworkConnection
 import cccandroidtest.ca.util.Utils
@@ -24,7 +26,10 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: ResponseViewModel by lazy {
         ViewModelProvider(
             this,
-            ResponseViewModelFactory()
+            ResponseViewModelFactory(
+                PersonRepository(this),
+                EstimateRepository(this)
+            )
         ).get(ResponseViewModel::class.java)
     }
 

@@ -9,12 +9,8 @@ interface EstimateDao {
     @Query("SELECT * FROM estimate ORDER BY id DESC")
     fun getAll(): Flow<List<Estimate>>
 
-    @Query("SELECT * FROM estimate WHERE name LIKE '%' || :keyword || '%' " +
-            " ORDER BY id DESC")
-    fun search(keyword: String?): List<Estimate>
-
     @Query("SELECT * FROM estimate ORDER BY id DESC")
-    fun search(): List<Estimate>
+    fun get(): List<Estimate>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(estimate: Estimate)

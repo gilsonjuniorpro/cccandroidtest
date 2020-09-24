@@ -9,7 +9,7 @@ import kotlinx.android.parcel.Parcelize
 @Entity
 data class Estimate(
     @PrimaryKey
-    val id: String? = null,
+    val id: String,
     val address: String? = null,
     val company: String? = null,
     val contact: String? = null,

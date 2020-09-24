@@ -25,11 +25,7 @@ class PersonRepository(context: Context) {
         return personDao.getAll()
     }
 
-    fun search(keyword: String?): List<Person> {
-        return if(keyword.isNullOrBlank()){
-            personDao.search()
-        }else{
-            personDao.search(keyword)
-        }
+    fun load(): List<Person> {
+        return personDao.get()
     }
 }

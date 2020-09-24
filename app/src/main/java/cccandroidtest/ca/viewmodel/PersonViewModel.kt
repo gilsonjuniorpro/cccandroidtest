@@ -2,12 +2,10 @@ package cccandroidtest.ca.viewmodel
 
 import androidx.lifecycle.*
 import cccandroidtest.ca.model.Person
-import cccandroidtest.ca.model.Response
 import cccandroidtest.ca.repository.PersonRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.lang.Exception
 
 class PersonViewModel(
     private val repository: PersonRepository
@@ -44,10 +42,10 @@ class PersonViewModel(
         }
     }
 
-    fun search(query: String?) {
+    fun load() {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
-                _list.postValue(repository.search(query))
+                _list.postValue(repository.load())
             }
         }
     }

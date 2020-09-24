@@ -9,7 +9,7 @@ import kotlinx.android.parcel.Parcelize
 @Entity
 data class Person(
     @PrimaryKey
-    val id: String? = null,
+    val id: String,
     val email: String? = null,
     val first_name: String? = null,
     val last_name: String? = null,

@@ -67,7 +67,7 @@ class EstimateViewModel(
             _state.value = State.Loading
 
             val result = withContext(Dispatchers.IO) {
-                TeamHttp.getFromTeamPlayerFromAPI()
+                RetrieveHttp.getFromTeamPlayerFromAPI()
             }
 
             if(result == null){

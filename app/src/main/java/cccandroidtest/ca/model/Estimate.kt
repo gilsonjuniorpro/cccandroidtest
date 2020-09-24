@@ -1,8 +1,11 @@
 package cccandroidtest.ca.model
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 @Entity
 data class Estimate(
     @PrimaryKey
@@ -15,4 +18,4 @@ data class Estimate(
     val number: Int = 0,
     val requested_by: String? = null,
     val revision_number: Int = 0
-)
+): Parcelable {}

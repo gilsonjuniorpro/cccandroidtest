@@ -1,9 +1,9 @@
 package cccandroidtest.ca.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import cccandroidtest.ca.R
@@ -12,7 +12,6 @@ import cccandroidtest.ca.fragment.MainFragment
 import cccandroidtest.ca.model.Response
 import cccandroidtest.ca.repository.EstimateRepository
 import cccandroidtest.ca.repository.PersonRepository
-import cccandroidtest.ca.util.Constants
 import cccandroidtest.ca.util.NetworkConnection
 import cccandroidtest.ca.util.Utils
 import cccandroidtest.ca.viewmodel.ResponseViewModel

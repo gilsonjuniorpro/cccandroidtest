@@ -13,12 +13,14 @@
             android:layout_height="100dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:src="@drawable/ic_image"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+            tools:src="@tools:sample/avatars"
+            android:contentDescription="@string/company_icon" />
 
         <TextView
-            android:id="@+id/tvSchoolName"
+            android:id="@+id/tvCompanyName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -32,15 +34,15 @@
             tools:text="Placebo Secundary School" />
 
         <TextView
-            android:id="@+id/tvSchoolAddress"
+            android:id="@+id/tvCompanyAddress"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textColor="@color/colorSubtitle"
             app:layout_constraintBottom_toBottomOf="@+id/ivPicture"
-            app:layout_constraintEnd_toEndOf="@+id/tvSchoolName"
-            app:layout_constraintStart_toStartOf="@+id/tvSchoolName"
-            app:layout_constraintTop_toBottomOf="@+id/tvSchoolName"
+            app:layout_constraintEnd_toEndOf="@+id/tvCompanyName"
+            app:layout_constraintStart_toStartOf="@+id/tvCompanyName"
+            app:layout_constraintTop_toBottomOf="@+id/tvCompanyName"
             app:layout_constraintVertical_bias="0.0"
             tools:text="32 Commissioners Road East" />
 
@@ -50,11 +52,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
+            android:text="@string/label_est_details"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivPicture"
-            tools:text="Est. Details" />
+            app:layout_constraintTop_toBottomOf="@+id/ivPicture" />
 
         <View
             android:id="@+id/view"
@@ -80,7 +82,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="Est. Number"
+            android:text="@string/label_est_number"
             android:textColor="@color/colorSubtitle"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -95,7 +97,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="Review Numer"
+            android:text="@string/label_review_number"
             android:textColor="@color/colorSubtitle"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -131,7 +133,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:text="Created"
+            android:text="@string/label_created"
             android:textColor="@color/colorSubtitle"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -146,7 +148,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:text="Requester"
+            android:text="@string/label_requester"
             android:textColor="@color/colorSubtitle"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -161,7 +163,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:text="Created By"
+            android:text="@string/label_created_by"
             android:textColor="@color/colorSubtitle"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -176,7 +178,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            android:text="Created By"
+            android:text="@string/label_contact"
             android:textColor="@color/colorSubtitle"
             android:textSize="16sp"
             android:textStyle="bold"

@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
                 is ResponseViewModel.State.Loaded -> {
                     binding.loading.visibility = View.GONE
-                    openDetail(state.item)
+                    openDetail()
                 }
 
                 is ResponseViewModel.State.Error -> {
@@ -81,16 +81,13 @@ class MainActivity : AppCompatActivity() {
 
         val response: Response = Gson().fromJson(jsonFile, Response::class.java)
 
-        openDetail(response)
+        response.person?.let { viewModel.insertPerson(it) }
+        response.estimate?.let { viewModel.insertEstimate(it) }
+
+        openDetail()
     }
 
-    private fun openDetail(response: Response){
-        val mainFragment = MainFragment()
-
-        val bundle = Bundle()
-        bundle.putParcelable(Constants.OBJECT_RESPONSE, response)
-        mainFragment.arguments = bundle
-
-        supportFragmentManager.beginTransaction().replace(R.id.container, mainFragment).commit()
+    private fun openDetail(){
+        supportFragmentManager.beginTransaction().replace(R.id.container, MainFragment()).commit()
     }
 }

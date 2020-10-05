@@ -18,4 +18,6 @@ data class Estimate(
     val number: Int = 0,
     val requested_by: String? = null,
     val revision_number: Int = 0
-): Parcelable {}
+): Parcelable {
+
+}
